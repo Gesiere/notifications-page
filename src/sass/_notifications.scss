@@ -1,0 +1,102 @@
+.notifications-list{
+    margin-top: 2rem;
+    .notification-item{
+        .item-body{
+            padding: 1rem;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: flex-start;
+            column-gap: 10px;
+            border-radius: 10px;
+            @include breakpoint-up(medium){
+                column-gap: 20px;
+            }
+            img{
+                width: 3rem;
+                @include breakpoint-up(medium){
+                    width: 3rem;
+                }
+            }
+            .notification-details{
+                .headings{
+                    display: flex;
+                    align-items: center;
+                    p{
+                        color: $dark-grayish-blue;
+                        span.name{
+                            color: $dark-blue ;
+                            font-weight: bold;
+                            cursor: pointer;
+                            transition: $transition;
+                            &:hover{
+                                color: $primary-blue;
+                            }
+                        }
+                        span.notify{
+                            font-weight: bold;
+                            cursor: pointer;
+                            transition: $transition;
+                            &:hover{
+                                color: $primary-blue;
+                            }
+                        }
+                        span.special{
+                            color: $primary-blue;
+                            font-weight: 800;
+                            cursor: pointer;
+                            @include breakpoint-up(medium){
+                                font-size: 1.2rem;
+                            }
+                        }
+                        @include breakpoint-up(medium){
+                            font-size: 18px;
+                        }
+                    }
+                    .new-indicator{
+                        display: inline-block;
+                        aspect-ratio: 1;
+                        margin-left: .5rem;
+                        border-radius: 50%;
+                        width: 7px;
+                        background-color: $primary-red;
+                        flex-shrink: 0;
+                    }
+
+                }
+                p.time{
+                    line-height: 1.5em;
+                    color: $grayish-blue;
+                    @include breakpoint-up(medium){
+                        font-size: 18px;
+                    }
+                }
+                .message{
+                    margin-top: 0.5rem;
+                    padding: 1rem;
+                    color: $dark-grayish-blue;
+                    border: 1px solid $light-grayish-blue1;
+                    border-radius: 5px;
+                    transition: $transition;
+                    cursor: pointer;
+                    &:hover{
+                        background-color: $light-grayish-blue1;
+                    }
+                    @include breakpoint-up(medium){
+                        font-size: 18px;
+                    }
+                    
+                }
+             
+            }
+            
+        }
+        .picture{
+                display: grid;
+                grid-template-columns: 3rem 1fr 3rem;
+                cursor: pointer;
+            }
+        .new{
+            background-color: $light-grayish-blue1;
+        }
+    }
+}
